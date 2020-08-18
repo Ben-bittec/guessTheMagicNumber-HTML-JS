@@ -1,0 +1,57 @@
+<html>
+
+    <head>
+    
+        <title>Guess the Magic Number</title>
+        
+        
+    
+    </head>
+    
+    <body>
+        
+        
+        <p>Whats the Magic Number?</p>
+        
+        <p><input type="text" id="magicNumber"></p>
+        
+        <p><button id="compare">Send</button></p>
+        
+        <script type="text/javascript">
+            
+            var randomNumber = Math.random();
+               
+               randomNumber = randomNumber * 6;
+               
+               randomNumber = Math.floor(randomNumber);
+            
+           document.getElementById("compare").onclick = function() {
+               
+               if(document.getElementById("magicNumber").value == randomNumber) {
+                   
+                   alert("Great you guess right :)");
+                   
+                    randomNumber = Math.random();
+               
+                    randomNumber = randomNumber * 6;
+               
+                    randomNumber = Math.floor(randomNumber);
+                   
+               }else {
+                   
+                   alert("Wrong try again!");
+                   
+               }
+               
+               
+           }
+            
+
+        </script>
+        
+    
+    </body>
+    
+    
+    
+</html>

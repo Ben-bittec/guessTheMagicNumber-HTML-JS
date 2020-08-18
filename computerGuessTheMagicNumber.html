@@ -1,0 +1,81 @@
+<html>
+
+    <head>
+        <title>Javascript</title>
+        <meta charset="utf-8">
+        <meta name="author" content="s1ck0">
+        
+    
+    </head>
+    
+    <body>
+        
+        <p>Computer, Guess the Magic Number!</p>
+    
+        <p>
+            <select id="myNumber">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>    
+            
+            </select>
+        
+        
+        
+        
+        </p>
+        
+        <button id="trys">Guess</button>
+        
+        <script type="text/javascript">
+            
+            document.getElementById("trys").onclick = function(){
+                
+                var myNumber = document.getElementById("myNumber").value;
+                
+                var guess = false;
+                
+                var trys = 1;
+                            
+                while(guess == false) {
+                    
+                    var estimate = Math.random();
+                    estimate = estimate * 6;
+                    estimate = Math.floor(estimate);
+                    
+                    if(estimate == myNumber){
+                        
+                        guess = true;
+                        
+                        alert("Got it! Your Number is " + estimate + " i need " +  trys + " trys!");
+                        
+                    }else {
+                        
+                        trys++;
+                        
+                    }
+                    
+                    
+                    
+                }
+                
+                
+                
+                
+            }
+            
+            
+            
+            
+            
+        </script>
+        
+    
+    </body>
+    
+    
+    
+</html>
